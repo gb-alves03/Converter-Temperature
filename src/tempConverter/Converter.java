@@ -4,6 +4,7 @@ public class Converter {
 	private Celsius celsius;
 	private Fahrenheit fahrenheit;
 	private Kelvin kelvin;
+	private Rankine rankine;
 	
 	public void setCelsius(Celsius celsius) {
 		this.celsius = celsius;
@@ -54,5 +55,35 @@ public class Converter {
 	public void fahrenheitToKelvin() {
 		double kelvin = ((fahrenheit.getTemperature() - 32) * 0.5556) + 273.15;
 		System.out.println(fahrenheit.getTemperature() + " F degrees in K = " + kelvin);
+	}
+	
+	public void celsiusToRankine() {
+		double rankine = ((celsius.getTemperature() * 1.8) + 491.67;
+		System.out.println(celsius.getTemperature() + " C degrees  in R = " + rankine);
+	}
+	
+	public void rankineToCelsius() {
+		double celsius = ((rankine.getTemperature() - 491.67) / 1.8);
+		System.out.println(rankine.getTemperature() + " R degrees in C = " + celsius);
+	}
+	
+	public void fahrenheitToRankine() {
+		double rankine = (fahrenheit.getTemperature() + 459.67);
+		System.out.println(fahrenheit.getTemperature() + " F degrees in R = " + rankine);
+	}
+				 
+	public void rankineToFahrenheit(){
+		double fahrenheit = (rankine.getTemperature() - 459.67);
+		System.out.println(rankine.getTemperature() + " R degrees in F = " + fahrenheit);
+	}
+	
+	public void kelvinToRankine(){
+		double rankine = (kelvin.getTemperature() * 1.8);
+		System.out.println(kelvin.getTemperature() + " K degrees in R = " + rankine);
+	}
+	
+	public void rankineToKelvin(){
+		double kelvin = (rankine.getTemperature() / 1.8);
+		System.out.println(rankine.getTemperature() + " R degrees in K = " + kelvin);
 	}
 }
