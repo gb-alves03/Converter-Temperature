@@ -3,30 +3,41 @@ package tempConverter;
 public class Converter {
 	private Celsius celsius;
 	private Fahrenheit fahrenheit;
-	private Kelvin kelvin;
 	private Rankine rankine;
+	private Kelvin kelvin;
+	
+	
+	public Celsius getCelsius() {
+		return celsius;
+	}
 	
 	public void setCelsius(Celsius celsius) {
 		this.celsius = celsius;
 	}
-	public Celsius getCelsius() {
-		return celsius;
+	
+	public Fahrenheit getFahrenheit() {
+		return fahrenheit;
 	}
 	
 	public void setFahrenheit(Fahrenheit fahrenheit) {
 		this.fahrenheit = fahrenheit;
 	}
-	public Fahrenheit getFahrenheit(){
-		return fahrenheit;
+	
+	public Rankine getRankine() {
+		return rankine;
+	}
+	
+	public void setRankine(Rankine rankine) {
+		this.rankine = rankine;
+	}
+	
+	public Kelvin getKelvin() {
+		return kelvin;
 	}
 	
 	public void setKelvin(Kelvin kelvin) {
 		this.kelvin = kelvin;
 	}
-	public Kelvin getKelvin() {
-		return kelvin;
-	}
-	
 	public void celsiusToFahrenheit() {
 		double fahrenheit = (celsius.getTemperature() * 1.8) + 32;
 		System.out.println(celsius.getTemperature() + " C degrees in F = " + fahrenheit);
@@ -58,7 +69,7 @@ public class Converter {
 	}
 	
 	public void celsiusToRankine() {
-		double rankine = ((celsius.getTemperature() * 1.8) + 491.67;
+		double rankine = ((celsius.getTemperature() * 1.8)) + 491.67;
 		System.out.println(celsius.getTemperature() + " C degrees  in R = " + rankine);
 	}
 	
