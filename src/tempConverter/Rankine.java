@@ -1,20 +1,19 @@
 package tempConverter;
+
 import java.util.Scanner;
 
-public class Rankine {
-	private double temperature;
+public class Rankine extends Temperature{
 	
 	Scanner input = new Scanner(System.in);
 	
-	public void setTemperature(double temperature) {
-		this.temperature = temperature;
-	}
-	public double getTemperature() {
-		return temperature;
+	public Rankine(double temperature) {
+		super(temperature);
 	}
 	
+	@Override
 	public void insertTemperature() {
-		System.out.println("Insert the temperature in Rankine to convert: ");
+		System.out.println("Insert the temperature in Rankine to convert");
 		this.temperature = input.nextDouble();
 	}
+
 }
